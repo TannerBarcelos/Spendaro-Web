@@ -1,3 +1,9 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": ["@stylistic/js"],
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "rules": {
+    "no-unused-vars": ["error", { "varsIgnorePattern": "^_" }],
+    "prefer-const": ["warn", { "destructuring": "all" }],
+    "@stylistic/js/arrow-parens": ["error", "always"]
+  }
 }
